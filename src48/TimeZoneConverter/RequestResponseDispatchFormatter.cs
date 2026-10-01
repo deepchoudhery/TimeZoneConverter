@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
-using System.ServiceModel.Channels;
-using System.ServiceModel.Dispatcher;
+using CoreWCF.Channels;
+using CoreWCF.Dispatcher;
 using TimeZoneConverter.Contracts;
 using TimeZoneConvertor.Serializers;
 

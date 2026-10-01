@@ -26,6 +26,7 @@
 - Flow mode: Automatic (user asked for defaults to be chosen without pausing).
 - Working branch: stay on the existing session worktree branch `deepchoudhery-fantastic-goggles` (no new branch). Branch Sync disabled because source and working branch are the same.
 - Commit strategy: After Each Task (default).
+- Task 03 WSDL parity: `?wsdl`, `?wsdl=wsdl0` and `?singleWsdl` from CoreWCF differ from the net481 golden baseline only in the order of root `xmlns` declarations (content otherwise identical). Accepted as non-semantic (recommended option, per user rule) — namespace-declaration order carries no XML meaning; responses are not rewritten to reorder them. SOAP response envelopes remain byte-identical.
 
 ## Upgrade Options
 
@@ -75,6 +76,6 @@ Not offered (triggers not met): Test Coverage, System.Web Adapters, Package Mana
 - Owner inputs at completion: external consumers, production HTTPS binding/certificate, deployment host/OS, CodeQL autobuild in CI; deferred: engine reassessment (WCF-012).
 
 ## Build Tool Decisions
-- **TimeZoneConverter.csproj** (legacy WebApplication, net481): msbuild.exe (VS 18 MSBuild with WebApplication targets) — still non-SDK-style after task 02 (host SDK conversion fell back to task 03); re-evaluate in task 03 (`Microsoft.NET.Sdk.Web` net10.0 → `dotnet build`).
+- **TimeZoneConverter.csproj**: since task 03 `Microsoft.NET.Sdk.Web`, net10.0, PackageReference CoreWCF.Primitives/Http 1.9.1 → `dotnet build src48\TimeZoneConverter\TimeZoneConverter.csproj` (no Visual Studio MSBuild/WebApplication targets needed). Run: `dotnet run --no-build --launch-profile TimeZoneConverter` (http://localhost:50355). (Before task 03: legacy WebApplication net481 built with VS 18 msbuild.exe.)
 - **TimeZoneConverterTest.csproj** (SDK-style since task 02, net481, PackageReference MSTest 2.2.7, no Microsoft.NETFramework.ReferenceAssemblies): msbuild.exe `/restore` (solution build, because it references the legacy WebApplication host); tests via vstest.console.exe on `bin\Debug\net481\TimeZoneConverterTest.dll` (no Microsoft.NET.Test.Sdk, so not `dotnet test`) — re-evaluate in task 04 (net10.0).
 - NuGet: api.nuget.org disabled/unreachable on this machine; restores go through the enabled `azure-default` proxy feed (packagefeedproxy.microsoft.io).
