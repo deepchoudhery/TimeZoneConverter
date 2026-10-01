@@ -3,11 +3,12 @@
   "operationId": "d50625b6-67fb-4ada-92d6-801cbc427ddd",
   "description": "Migrates .NET Framework WCF services to CoreWCF on modern .NET, including service hosts, contracts, clients, configuration, dependencies, tests, and deployment. Combines a .NET engine assessment with AI WCF analysis and a dependency-ordered plan. Use when asked to \u0022upgrade WCF\u0022, \u0022migrate to CoreWCF\u0022, or a WCF package, assembly, binding, endpoint, ServiceHost, System.ServiceModel, or .svc upgrade that requires server migration rather than a version bump. Does not migrate client-only System.ServiceModel package updates or already-migrated CoreWCF version bumps.\n",
   "startTime": "2026-10-01T23:21:23.1053118Z",
-  "lastUpdateTime": "2026-10-01T23:40:46.7596592Z",
+  "lastUpdateTime": "2026-10-01T23:47:03.4847633Z",
   "properties": {
     "UpgradeTargetFramework": "net10.0",
     "taskStates": {
-      "01-validation-environment-and-wire-baseline": "Completed"
+      "01-validation-environment-and-wire-baseline": "Completed",
+      "02-sdk-style-conversion": "Completed"
     }
   },
   "folderPath": ""

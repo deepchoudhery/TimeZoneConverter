@@ -83,10 +83,6 @@
   <ItemGroup />
   <ItemGroup>
     <None Include="GenerateContracts.ps1" />
-    <None Include="Contracts\TimeZoneConverter.wsdl" />
-    <None Include="Contracts\TimeZoneConverter.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

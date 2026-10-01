@@ -75,6 +75,6 @@ Not offered (triggers not met): Test Coverage, System.Web Adapters, Package Mana
 - Owner inputs at completion: external consumers, production HTTPS binding/certificate, deployment host/OS, CodeQL autobuild in CI; deferred: engine reassessment (WCF-012).
 
 ## Build Tool Decisions
-- **TimeZoneConverter.csproj** (legacy WebApplication, net481): msbuild.exe (VS 18 MSBuild with WebApplication targets) — non-SDK-style; re-evaluate after task 02/03.
-- **TimeZoneConverterTest.csproj** (legacy MSTest, packages.config, net481): msbuild.exe `/restore /p:RestorePackagesConfig=true`; tests via vstest.console.exe — re-evaluate after SDK-style conversion.
+- **TimeZoneConverter.csproj** (legacy WebApplication, net481): msbuild.exe (VS 18 MSBuild with WebApplication targets) — still non-SDK-style after task 02 (host SDK conversion fell back to task 03); re-evaluate in task 03 (`Microsoft.NET.Sdk.Web` net10.0 → `dotnet build`).
+- **TimeZoneConverterTest.csproj** (SDK-style since task 02, net481, PackageReference MSTest 2.2.7, no Microsoft.NETFramework.ReferenceAssemblies): msbuild.exe `/restore` (solution build, because it references the legacy WebApplication host); tests via vstest.console.exe on `bin\Debug\net481\TimeZoneConverterTest.dll` (no Microsoft.NET.Test.Sdk, so not `dotnet test`) — re-evaluate in task 04 (net10.0).
 - NuGet: api.nuget.org disabled/unreachable on this machine; restores go through the enabled `azure-default` proxy feed (packagefeedproxy.microsoft.io).
