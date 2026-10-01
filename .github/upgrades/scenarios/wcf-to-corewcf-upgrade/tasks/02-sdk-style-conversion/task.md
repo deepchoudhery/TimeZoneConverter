@@ -1,0 +1,7 @@
+# 02-sdk-style-conversion: Convert both projects to SDK-style on net481
+
+Convert `src48/TimeZoneConverterTest/TimeZoneConverterTest.csproj` and `src48/TimeZoneConverter/TimeZoneConverter.csproj` to SDK-style while **staying on net481**. Keep this separate from the TFM, hosting and API migration. For the test project: migrate `packages.config` to `PackageReference` at the same MSTest 2.2.7 versions, and remove the TeamTest import, the HintPaths and the `EnsureNuGetPackageBuildImports` target (WCF-009). For the host: keep `AssemblyName`/`RootNamespace` = `TimeZoneConvertor` and remove the stale `None` items `Contracts\TimeZoneConverter.wsdl|xsd`, which are missing on disk (WCF-008). The `.svc`, `Web.config` and transforms stay in place on net481 for now. #skill:migrating-wcf-to-corewcf
+
+Risk: SDK-style conversion of a classic WebApplication (`{349c5851…}`) `.svc` project on net481 may not be supported by the conversion tooling, or may lose IIS Express/.svc build behavior. If the converted host cannot build on net481 with its `.svc` content intact, revert only the host's conversion, record why, and move the host's project-format change into task 03, where it becomes `Microsoft.NET.Sdk.Web`. The test project conversion still lands here.
+
+**Done when**: Each converted project is SDK-style on net481. The solution builds and the 2 unit tests pass on net481, or are recorded UNVERIFIED with the missing prerequisite named (e.g. NuGet restore). Any host-conversion fallback is recorded with its reason.

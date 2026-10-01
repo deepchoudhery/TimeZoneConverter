@@ -1,0 +1,7 @@
+# 05-final-validation: Solution-wide validation, compatibility matrix and completion report
+
+Validate the whole migrated scope: a clean build of `src48/TimeZoneConverter.sln`, all tests, and `dotnet publish` of the host producing a runnable ASP.NET Core output (Sdk.Web `web.config` for IIS in-process included). Re-run the endpoint/client compatibility matrix against the golden baseline. That covers E1 with all 4 SoapUI samples, M1 metadata over HTTP (and HTTPS when bound), E2 Transport where an existing certificate allows, and SoapUI pointed unchanged at `http://localhost:50355/TimeZoneConverter.svc`. Check that `src60/` is unchanged. #skill:migrating-wcf-to-corewcf
+
+The completion report lists every check as passed, accepted change, or **UNVERIFIED (missing prerequisite named)**. It also lists the open owner inputs: external consumers, the production HTTPS binding and certificate, the deployment host and OS (IIS in-process / Kestrel / container), and whether CodeQL autobuild works on the net10.0 solution in CI. Deferred items are listed too: engine reassessment and live package re-verification (WCF-012), and the fact that the contract file is now hand-maintained.
+
+**Done when**: Build, tests and publish succeed. Every assessed finding WCF-001…WCF-012 maps to a completed change or a recorded reason. The compatibility matrix shows Strict XML parity for E1/M1 (E2 passed or UNVERIFIED). No check is silently waived. The completion report records the UNVERIFIED checks and the owner inputs.

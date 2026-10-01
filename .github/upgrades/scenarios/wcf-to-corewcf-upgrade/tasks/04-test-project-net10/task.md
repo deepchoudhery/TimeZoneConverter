@@ -1,0 +1,7 @@
+# 04-test-project-net10: Retarget TimeZoneConverterTest to net10.0 and add endpoint wire tests
+
+Retarget `src48/TimeZoneConverterTest` to `net10.0` against the migrated host. Move MSTest 2.2.7 to the `MSTest` 4.4.1 metapackage and update namespaces or references if task 03 changed the contract or serializer types (`TimeZoneConvertor.Serializers.ConvertToOffsetResponseSerializer`, `TimeZoneConverter.Contracts.*`). Keep both existing tests unchanged in intent. `ConversionReponseSerializerTest` checks an exact XML string, including the order of `xmlns:xsd`/`xmlns:xsi` (WCF-009). #skill:migrating-wcf-to-corewcf
+
+Add the endpoint-level tests from WCF-010. These are loopback tests through an in-process host (e.g. `Microsoft.AspNetCore.Mvc.Testing` 10.0.12 `WebApplicationFactory`, or in-process Kestrel) that replay the SoapUI raw-XML requests and check the response Action, namespaces, element order and `ToDateTime` value against the golden baseline from task 01. They become the repeatable Strict XML parity check. Any WCF-client test uses `System.ServiceModel.*` 10.0.0 in the client role only. The host may need a `public partial class Program` or `InternalsVisibleTo` so the test host can find its entry point.
+
+**Done when**: The full `src48/TimeZoneConverter.sln` builds on net10.0. Both original unit tests and the new endpoint wire tests pass, with the parity assertions tied to the recorded baseline (or to the labeled offline baseline if the original host could not be captured).

@@ -1,0 +1,413 @@
+{
+  "schemaVersion": 1,
+  "scanner": {
+    "name": "Get-WcfInventory",
+    "version": "1.0.0",
+    "host": "Core 7.6.6"
+  },
+  "generatedAtUtc": "2026-10-01T23:21:46.9176618Z",
+  "root": "C:\\Users\\decho\\source\\repos\\copilot-worktrees\\TimeZoneConverter\\deepchoudhery-fantastic-goggles\\src48",
+  "scope": [
+    "TimeZoneConverter/TimeZoneConverter.csproj",
+    "TimeZoneConverterTest/TimeZoneConverterTest.csproj"
+  ],
+  "coverage": {
+    "projectFiles": 2,
+    "configFiles": 3,
+    "svcFiles": 1,
+    "sourceFiles": 12,
+    "skippedFiles": [],
+    "parseErrors": [],
+    "findingsCapped": []
+  },
+  "projects": [
+    {
+      "path": "TimeZoneConverter/TimeZoneConverter.csproj",
+      "name": "TimeZoneConverter",
+      "language": "C#",
+      "sdkStyle": false,
+      "targetFrameworks": [
+        "net481"
+      ],
+      "projectTypes": [
+        "WebApplication"
+      ],
+      "wcfReferences": [
+        "System.Runtime.Serialization",
+        "System.ServiceModel",
+        "System.ServiceModel.Web"
+      ],
+      "coreWcfPackages": [],
+      "serviceReferences": false,
+      "role": "server+client",
+      "alreadyCoreWcf": false,
+      "evidence": {
+        "server": [
+          ".svc TimeZoneConverter.svc"
+        ],
+        "client": [
+          "generated proxy TimeZoneConverter/Contracts/ITimeZoneConverter.cs",
+          "client endpoint TimeZoneConverter.ITimeZoneConverter"
+        ],
+        "contracts": []
+      }
+    },
+    {
+      "path": "TimeZoneConverterTest/TimeZoneConverterTest.csproj",
+      "name": "TimeZoneConverterTest",
+      "language": "C#",
+      "sdkStyle": false,
+      "targetFrameworks": [
+        "net481"
+      ],
+      "projectTypes": [],
+      "wcfReferences": [
+        "System.Runtime.Serialization"
+      ],
+      "coreWcfPackages": [],
+      "serviceReferences": false,
+      "role": "none",
+      "alreadyCoreWcf": false,
+      "evidence": {
+        "server": [],
+        "client": [],
+        "contracts": []
+      }
+    }
+  ],
+  "services": [
+    {
+      "name": "TimeZoneConverter.TimeZoneConverterService",
+      "config": null,
+      "line": 0,
+      "project": "TimeZoneConverter/TimeZoneConverter.csproj",
+      "configured": false,
+      "behaviorConfiguration": null,
+      "behavior": {
+        "name": null,
+        "elements": [
+          "serviceMetadata",
+          "serviceDebug"
+        ],
+        "metadata": {
+          "httpGetEnabled": true,
+          "httpsGetEnabled": true,
+          "httpGetUrl": null,
+          "httpsGetUrl": null,
+          "externalMetadataLocation": null
+        },
+        "debug": {
+          "includeExceptionDetailInFaults": false,
+          "httpHelpPageEnabled": null
+        },
+        "throttling": null,
+        "credentials": null,
+        "authorization": null,
+        "source": "default behavior in TimeZoneConverter/Web.config"
+      },
+      "baseAddresses": [],
+      "svcRelativeAddress": "TimeZoneConverter.svc",
+      "defaultEndpoints": true,
+      "protocolMapping": [
+        {
+          "scheme": "https",
+          "binding": "basicHttpsBinding",
+          "bindingConfiguration": null
+        }
+      ],
+      "endpoints": [
+        {
+          "name": null,
+          "address": "",
+          "effectiveAddress": "TimeZoneConverter.svc",
+          "addressSource": "svc-relative, assumed IIS site binding",
+          "binding": "basicHttpBinding",
+          "bindingConfiguration": null,
+          "contract": null,
+          "bindingNamespace": null,
+          "listenUri": null,
+          "kind": null,
+          "identity": null,
+          "behaviorConfiguration": null,
+          "behaviorElements": [],
+          "isMex": false,
+          "isDefault": true,
+          "bindingSettings": {
+            "type": "basicHttpBinding",
+            "configurationName": null,
+            "securityMode": "None",
+            "securityModeSource": "default",
+            "transportCredentialType": null,
+            "messageCredentialType": null,
+            "reliableSession": false,
+            "transactionFlow": false,
+            "portSharingEnabled": false,
+            "transferMode": null,
+            "maxReceivedMessageSize": null,
+            "readerQuotas": null,
+            "transport": null,
+            "customElements": [],
+            "customSecurityMode": null,
+            "messageVersion": null,
+            "configuredAttributes": null
+          },
+          "line": 1
+        },
+        {
+          "name": null,
+          "address": "",
+          "effectiveAddress": "TimeZoneConverter.svc",
+          "addressSource": "svc-relative, assumed IIS site binding",
+          "binding": "basicHttpsBinding",
+          "bindingConfiguration": null,
+          "contract": null,
+          "bindingNamespace": null,
+          "listenUri": null,
+          "kind": null,
+          "identity": null,
+          "behaviorConfiguration": null,
+          "behaviorElements": [],
+          "isMex": false,
+          "isDefault": true,
+          "bindingSettings": {
+            "type": "basicHttpsBinding",
+            "configurationName": null,
+            "securityMode": "Transport",
+            "securityModeSource": "default",
+            "transportCredentialType": null,
+            "messageCredentialType": null,
+            "reliableSession": false,
+            "transactionFlow": false,
+            "portSharingEnabled": false,
+            "transferMode": null,
+            "maxReceivedMessageSize": null,
+            "readerQuotas": null,
+            "transport": null,
+            "customElements": [],
+            "customSecurityMode": null,
+            "messageVersion": null,
+            "configuredAttributes": null
+          },
+          "line": 1
+        }
+      ]
+    }
+  ],
+  "svcFiles": [
+    {
+      "path": "TimeZoneConverter/TimeZoneConverter.svc",
+      "project": "TimeZoneConverter/TimeZoneConverter.csproj",
+      "relativeAddress": "TimeZoneConverter.svc",
+      "service": "TimeZoneConverter.TimeZoneConverterService",
+      "factory": null,
+      "codeBehind": "TimeZoneConverter.svc.cs",
+      "language": "C#"
+    }
+  ],
+  "hosting": [
+    {
+      "config": "TimeZoneConverter/Web.config",
+      "project": "TimeZoneConverter/TimeZoneConverter.csproj",
+      "aspNetCompatibilityEnabled": true,
+      "multipleSiteBindingsEnabled": true,
+      "serviceActivations": []
+    }
+  ],
+  "contracts": [
+    {
+      "file": "TimeZoneConverter/Contracts/ITimeZoneConverter.cs",
+      "line": 16,
+      "project": "TimeZoneConverter/TimeZoneConverter.csproj",
+      "generated": true,
+      "name": "ITimeZoneConverter",
+      "namespace": "http://bartjolling.github.io/",
+      "callbackContract": null,
+      "sessionMode": null
+    }
+  ],
+  "serviceBehaviorAttributes": [],
+  "clients": [
+    {
+      "name": "BasicHttpBinding_ITimeZoneConverter",
+      "config": "TimeZoneConverter/Web.config",
+      "line": 17,
+      "project": "TimeZoneConverter/TimeZoneConverter.csproj",
+      "address": "http://localhost:50355/TimeZoneConverter.svc",
+      "binding": "basicHttpBinding",
+      "bindingConfiguration": "BasicHttpBinding_ITimeZoneConverter",
+      "contract": "TimeZoneConverter.ITimeZoneConverter",
+      "identity": null,
+      "bindingSettings": {
+        "type": "basicHttpBinding",
+        "configurationName": "BasicHttpBinding_ITimeZoneConverter",
+        "securityMode": "None",
+        "securityModeSource": "default",
+        "transportCredentialType": null,
+        "messageCredentialType": null,
+        "reliableSession": false,
+        "transactionFlow": false,
+        "portSharingEnabled": false,
+        "transferMode": null,
+        "maxReceivedMessageSize": null,
+        "readerQuotas": null,
+        "transport": null,
+        "customElements": [],
+        "customSecurityMode": null,
+        "messageVersion": null,
+        "configuredAttributes": {}
+      },
+      "regenerationLimits": []
+    }
+  ],
+  "clientUsages": [],
+  "environment": [],
+  "flagSummary": {
+    "WCFSCAN-HOST-SVC": {
+      "severity": "change",
+      "count": 1
+    },
+    "WCFSCAN-HOST-DEFAULT-ENDPOINTS": {
+      "severity": "change",
+      "count": 1
+    },
+    "WCFSCAN-HOST-ASPNETCOMPAT": {
+      "severity": "blocker",
+      "count": 1
+    },
+    "WCFSCAN-META-HTTPGET": {
+      "severity": "info",
+      "count": 1
+    },
+    "WCFSCAN-CFG-BEHAVIORS": {
+      "severity": "change",
+      "count": 1
+    },
+    "WCFSCAN-PM-EXTENSIBILITY": {
+      "severity": "info",
+      "count": 8
+    },
+    "WCFSCAN-CLIENT-CONFIG": {
+      "severity": "change",
+      "count": 1
+    },
+    "WCFSCAN-CLIENT-GENERATED": {
+      "severity": "info",
+      "count": 1
+    }
+  },
+  "findings": [
+    {
+      "flag": "WCFSCAN-CFG-BEHAVIORS",
+      "severity": "change",
+      "file": "TimeZoneConverter/Web.config",
+      "line": 21,
+      "detail": "1 service and 0 endpoint behavior(s)"
+    },
+    {
+      "flag": "WCFSCAN-CLIENT-CONFIG",
+      "severity": "change",
+      "file": "TimeZoneConverter/Web.config",
+      "line": 16,
+      "detail": "1 client endpoint(s)"
+    },
+    {
+      "flag": "WCFSCAN-CLIENT-GENERATED",
+      "severity": "info",
+      "file": "TimeZoneConverter/Contracts/ITimeZoneConverter.cs",
+      "line": 1,
+      "detail": "generated WCF client proxy"
+    },
+    {
+      "flag": "WCFSCAN-HOST-ASPNETCOMPAT",
+      "severity": "blocker",
+      "file": "TimeZoneConverter/Web.config",
+      "line": 34,
+      "detail": "aspNetCompatibilityEnabled=true"
+    },
+    {
+      "flag": "WCFSCAN-HOST-DEFAULT-ENDPOINTS",
+      "severity": "change",
+      "file": "TimeZoneConverter/TimeZoneConverter.svc",
+      "line": 1,
+      "detail": "TimeZoneConverter.TimeZoneConverterService is activated without a <service> element; protocolMapping overrides the default scheme bindings"
+    },
+    {
+      "flag": "WCFSCAN-HOST-SVC",
+      "severity": "change",
+      "file": "TimeZoneConverter/TimeZoneConverter.svc",
+      "line": 1,
+      "detail": "TimeZoneConverter.svc -> TimeZoneConverter.TimeZoneConverterService"
+    },
+    {
+      "flag": "WCFSCAN-META-HTTPGET",
+      "severity": "info",
+      "file": "TimeZoneConverter/Web.config",
+      "line": 25,
+      "detail": "httpGet=True httpsGet=True"
+    },
+    {
+      "flag": "WCFSCAN-PM-EXTENSIBILITY",
+      "severity": "info",
+      "file": "TimeZoneConverter/RequestResponseDispatchFormatter.cs",
+      "line": 9,
+      "detail": "public class RequestResponseDispatchFormatter : IDispatchMessageFormatter"
+    },
+    {
+      "flag": "WCFSCAN-PM-EXTENSIBILITY",
+      "severity": "info",
+      "file": "TimeZoneConverter/RequestResponseSerializerAttribute.cs",
+      "line": 8,
+      "detail": "public class RequestResponseSerializerAttribute : Attribute, IOperationBehavior"
+    },
+    {
+      "flag": "WCFSCAN-PM-EXTENSIBILITY",
+      "severity": "info",
+      "file": "TimeZoneConverter/RequestResponseSerializerAttribute.cs",
+      "line": 10,
+      "detail": "private IOperationBehavior XmlSerializerBehavior { get; set; }"
+    },
+    {
+      "flag": "WCFSCAN-PM-EXTENSIBILITY",
+      "severity": "info",
+      "file": "TimeZoneConverter/ResponseDispatchFormatter.cs",
+      "line": 9,
+      "detail": "public class ResponseDispatchFormatter : IDispatchMessageFormatter"
+    },
+    {
+      "flag": "WCFSCAN-PM-EXTENSIBILITY",
+      "severity": "info",
+      "file": "TimeZoneConverter/ResponseDispatchFormatter.cs",
+      "line": 11,
+      "detail": "private readonly IDispatchMessageFormatter _requestFormatter;"
+    },
+    {
+      "flag": "WCFSCAN-PM-EXTENSIBILITY",
+      "severity": "info",
+      "file": "TimeZoneConverter/ResponseDispatchFormatter.cs",
+      "line": 14,
+      "detail": "public ResponseDispatchFormatter(IDispatchMessageFormatter requestFormatter)"
+    },
+    {
+      "flag": "WCFSCAN-PM-EXTENSIBILITY",
+      "severity": "info",
+      "file": "TimeZoneConverter/ResponseSerializerAttribute.cs",
+      "line": 8,
+      "detail": "public class ResponseSerializerAttribute : Attribute, IOperationBehavior"
+    },
+    {
+      "flag": "WCFSCAN-PM-EXTENSIBILITY",
+      "severity": "info",
+      "file": "TimeZoneConverter/ResponseSerializerAttribute.cs",
+      "line": 10,
+      "detail": "private IOperationBehavior XmlSerializerBehavior { get; set; }"
+    }
+  ],
+  "limits": [
+    "XML and text pattern detection, not a semantic model: verify each finding in source.",
+    "Transforms are flagged, not applied; per-environment values may differ from the base config.",
+    "IIS applicationHost.config, machine.config, registry and certificate stores are not read.",
+    "Default endpoints (isDefault) of .svc-hosted services assume HTTP and HTTPS site bindings; one exists per implemented contract, which config does not name.",
+    "Code-built endpoints and bindings are flagged by pattern; their effective settings are not resolved.",
+    "Support status for each flag lives in support-matrix.md, not in this output."
+  ]
+}
