@@ -1,0 +1,2 @@
+# Golden wire artifacts must stay byte-exact (SHA256-checked against capture-manifest.json).
+* -text

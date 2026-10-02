@@ -1,0 +1,13 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bar="http://bartjolling.github.io/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <bar:ConvertToOffsetRequest>
+         <!--Optional:-->
+         <bar:TimeZoneConversionRequest>
+            <bar:FromDateTime>2022-09-24T10:23:45.678</bar:FromDateTime>
+            <bar:FromOffset>120</bar:FromOffset>
+            <bar:ToOffset>120</bar:ToOffset>
+         </bar:TimeZoneConversionRequest>
+      </bar:ConvertToOffsetRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

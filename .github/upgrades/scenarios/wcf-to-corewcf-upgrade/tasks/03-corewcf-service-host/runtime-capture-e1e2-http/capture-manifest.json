@@ -1,0 +1,211 @@
+{
+    "label":  "corewcf-net10-http-with-https-binding",
+    "baseUrl":  "http://localhost:50355/TimeZoneConverter.svc",
+    "capturedBy":  "Capture-WcfWireBaseline.ps1",
+    "started":  "2026-10-01T16:56:29.3249565-07:00",
+    "metadata":  [
+                     {
+                         "url":  "http://localhost:50355/TimeZoneConverter.svc?wsdl",
+                         "file":  "metadata/wsdl.xml",
+                         "capturedAt":  "2026-10-01T16:56:29.3304748-07:00",
+                         "status":  200,
+                         "bytes":  3209,
+                         "sha256":  "9e0c9725001cec29ef8fd531f60dfc0ff12806efd33290b8cb3e337d2a2c9ab0",
+                         "headers":  {
+                                         "Transfer-Encoding":  "chunked",
+                                         "X-Frame-Options":  "SAMEORIGIN",
+                                         "Date":  "Thu, 01 Oct 2026 23:56:28 GMT",
+                                         "Server":  "Kestrel",
+                                         "Content-Type":  "text/xml; charset=UTF-8"
+                                     }
+                     },
+                     {
+                         "url":  "http://localhost:50355/TimeZoneConverter.svc?wsdl=wsdl0",
+                         "file":  "metadata/wsdl-wsdl0.xml",
+                         "capturedAt":  "2026-10-01T16:56:29.5658593-07:00",
+                         "status":  200,
+                         "bytes":  1919,
+                         "sha256":  "1514e656fc23caf7fbc89b0a4a04b49649ba0d55b7fde1d76423adccee33353e",
+                         "headers":  {
+                                         "Transfer-Encoding":  "chunked",
+                                         "X-Frame-Options":  "SAMEORIGIN",
+                                         "Date":  "Thu, 01 Oct 2026 23:56:28 GMT",
+                                         "Server":  "Kestrel",
+                                         "Content-Type":  "text/xml; charset=UTF-8"
+                                     }
+                     },
+                     {
+                         "url":  "http://localhost:50355/TimeZoneConverter.svc?xsd=xsd0",
+                         "file":  "metadata/xsd-xsd0.xsd",
+                         "capturedAt":  "2026-10-01T16:56:29.5768628-07:00",
+                         "status":  200,
+                         "bytes":  1252,
+                         "sha256":  "c6688d3a71b4af29ceb6629293bea66f635a9575684c1926fb5ecedd0597b356",
+                         "headers":  {
+                                         "Transfer-Encoding":  "chunked",
+                                         "X-Frame-Options":  "SAMEORIGIN",
+                                         "Date":  "Thu, 01 Oct 2026 23:56:28 GMT",
+                                         "Server":  "Kestrel",
+                                         "Content-Type":  "text/xml; charset=UTF-8"
+                                     }
+                     },
+                     {
+                         "url":  "http://localhost:50355/TimeZoneConverter.svc?singleWsdl",
+                         "file":  "metadata/singleWsdl.xml",
+                         "capturedAt":  "2026-10-01T16:56:29.6590538-07:00",
+                         "status":  200,
+                         "bytes":  4952,
+                         "sha256":  "0808321a4a140756af058df8ffc325b1fc428748ad01b304f75ef9be098bff84",
+                         "headers":  {
+                                         "Transfer-Encoding":  "chunked",
+                                         "X-Frame-Options":  "SAMEORIGIN",
+                                         "Date":  "Thu, 01 Oct 2026 23:56:29 GMT",
+                                         "Server":  "Kestrel",
+                                         "Content-Type":  "text/xml; charset=UTF-8"
+                                     }
+                     },
+                     {
+                         "url":  "http://localhost:50355/TimeZoneConverter.svc",
+                         "file":  "metadata/service-help-page.html",
+                         "capturedAt":  "2026-10-01T16:56:29.6945942-07:00",
+                         "status":  200,
+                         "bytes":  3111,
+                         "sha256":  "2a5a1303f6737d5fec77612c6dc5a42a442579614748069c85b69ccb6b1d0f09",
+                         "headers":  {
+                                         "Transfer-Encoding":  "chunked",
+                                         "X-Frame-Options":  "SAMEORIGIN",
+                                         "Date":  "Thu, 01 Oct 2026 23:56:29 GMT",
+                                         "Server":  "Kestrel",
+                                         "Content-Type":  "text/html; charset=UTF-8"
+                                     }
+                     }
+                 ],
+    "envelopes":  [
+                      {
+                          "name":  "ConvertToLowerOffset",
+                          "supplementary":  false,
+                          "url":  "http://localhost:50355/TimeZoneConverter.svc",
+                          "capturedAt":  "2026-10-01T16:56:29.7432081-07:00",
+                          "requestHeaders":  {
+                                                 "Content-Type":  "text/xml;charset=UTF-8",
+                                                 "SOAPAction":  "\"http://bartjolling.github.io/ITimeZoneConverter/ConvertToOffsetRequest\""
+                                             },
+                          "requestFile":  "envelopes/ConvertToLowerOffset.request.xml",
+                          "requestSha256":  "2df5cd3cdf6ec9d2ac6dddd4a7e14e38eff0dc48acd8915226b9e7b32b4cbd72",
+                          "soapUiCrMarkerNormalized":  true,
+                          "status":  200,
+                          "responseFile":  "envelopes/ConvertToLowerOffset.response.xml",
+                          "responseBytes":  397,
+                          "responseSha256":  "6b2ae728adf327f69a316bffe4b38516f37a12d99f1ebc3f9783b044e352c419",
+                          "responseHeaders":  {
+                                                  "Connection":  "keep-alive",
+                                                  "X-Frame-Options":  "SAMEORIGIN",
+                                                  "Date":  "Thu, 01 Oct 2026 23:56:29 GMT",
+                                                  "Server":  "Kestrel",
+                                                  "Content-Length":  "397",
+                                                  "Content-Type":  "text/xml; charset=utf-8"
+                                              }
+                      },
+                      {
+                          "name":  "ConvertToHigherOffset",
+                          "supplementary":  false,
+                          "url":  "http://localhost:50355/TimeZoneConverter.svc",
+                          "capturedAt":  "2026-10-01T16:56:29.8689202-07:00",
+                          "requestHeaders":  {
+                                                 "Content-Type":  "text/xml;charset=UTF-8",
+                                                 "SOAPAction":  "\"http://bartjolling.github.io/ITimeZoneConverter/ConvertToOffsetRequest\""
+                                             },
+                          "requestFile":  "envelopes/ConvertToHigherOffset.request.xml",
+                          "requestSha256":  "ec51bd5c3e0cb5f2ee3f196b1c8b5a6b8226332a0a09c3f53150c19a9ef4cd97",
+                          "soapUiCrMarkerNormalized":  false,
+                          "status":  200,
+                          "responseFile":  "envelopes/ConvertToHigherOffset.response.xml",
+                          "responseBytes":  397,
+                          "responseSha256":  "8154783489a0b18728a6dadc587008160b69eef21ebc6b1594eff339cc5c8e1a",
+                          "responseHeaders":  {
+                                                  "Connection":  "keep-alive",
+                                                  "X-Frame-Options":  "SAMEORIGIN",
+                                                  "Date":  "Thu, 01 Oct 2026 23:56:29 GMT",
+                                                  "Server":  "Kestrel",
+                                                  "Content-Length":  "397",
+                                                  "Content-Type":  "text/xml; charset=utf-8"
+                                              }
+                      },
+                      {
+                          "name":  "ConvertToSameOffset",
+                          "supplementary":  false,
+                          "url":  "http://localhost:50355/TimeZoneConverter.svc",
+                          "capturedAt":  "2026-10-01T16:56:29.8849392-07:00",
+                          "requestHeaders":  {
+                                                 "Content-Type":  "text/xml;charset=UTF-8",
+                                                 "SOAPAction":  "\"http://bartjolling.github.io/ITimeZoneConverter/ConvertToOffsetRequest\""
+                                             },
+                          "requestFile":  "envelopes/ConvertToSameOffset.request.xml",
+                          "requestSha256":  "ed04f0e8ddffe2656f9562f3bc6a404f9acac8fa8628f01d66b0bfe59f2da5d3",
+                          "soapUiCrMarkerNormalized":  true,
+                          "status":  200,
+                          "responseFile":  "envelopes/ConvertToSameOffset.response.xml",
+                          "responseBytes":  397,
+                          "responseSha256":  "13f11146ddfbbd2e9e16ec3974361871bbe7e5248d51faf88fd94b9b664cca24",
+                          "responseHeaders":  {
+                                                  "Connection":  "keep-alive",
+                                                  "X-Frame-Options":  "SAMEORIGIN",
+                                                  "Date":  "Thu, 01 Oct 2026 23:56:29 GMT",
+                                                  "Server":  "Kestrel",
+                                                  "Content-Length":  "397",
+                                                  "Content-Type":  "text/xml; charset=utf-8"
+                                              }
+                      },
+                      {
+                          "name":  "ConvertToNegativeOffset",
+                          "supplementary":  false,
+                          "url":  "http://localhost:50355/TimeZoneConverter.svc",
+                          "capturedAt":  "2026-10-01T16:56:29.8944864-07:00",
+                          "requestHeaders":  {
+                                                 "Content-Type":  "text/xml;charset=UTF-8",
+                                                 "SOAPAction":  "\"http://bartjolling.github.io/ITimeZoneConverter/ConvertToOffsetRequest\""
+                                             },
+                          "requestFile":  "envelopes/ConvertToNegativeOffset.request.xml",
+                          "requestSha256":  "b48283ee669fec3a708f337353fdcde8353b0362ba7dcbfb074f08ac2d38ae1a",
+                          "soapUiCrMarkerNormalized":  true,
+                          "status":  200,
+                          "responseFile":  "envelopes/ConvertToNegativeOffset.response.xml",
+                          "responseBytes":  397,
+                          "responseSha256":  "df2154a86086cd4ac5d481ad337aa9d2a47c111e1ed396b612fa3a6bcfca4391",
+                          "responseHeaders":  {
+                                                  "Connection":  "keep-alive",
+                                                  "X-Frame-Options":  "SAMEORIGIN",
+                                                  "Date":  "Thu, 01 Oct 2026 23:56:29 GMT",
+                                                  "Server":  "Kestrel",
+                                                  "Content-Length":  "397",
+                                                  "Content-Type":  "text/xml; charset=utf-8"
+                                              }
+                      },
+                      {
+                          "name":  "FaultProbe-UnknownAction",
+                          "supplementary":  true,
+                          "url":  "http://localhost:50355/TimeZoneConverter.svc",
+                          "capturedAt":  "2026-10-01T16:56:29.9014783-07:00",
+                          "requestHeaders":  {
+                                                 "Content-Type":  "text/xml;charset=UTF-8",
+                                                 "SOAPAction":  "\"http://bartjolling.github.io/ITimeZoneConverter/UnknownOperation\""
+                                             },
+                          "requestFile":  "envelopes/FaultProbe-UnknownAction.request.xml",
+                          "requestSha256":  "2df5cd3cdf6ec9d2ac6dddd4a7e14e38eff0dc48acd8915226b9e7b32b4cbd72",
+                          "soapUiCrMarkerNormalized":  true,
+                          "status":  500,
+                          "responseFile":  "envelopes/FaultProbe-UnknownAction.response.xml",
+                          "responseBytes":  762,
+                          "responseSha256":  "36d54977b1254a7a7c9867a9e6713b802a13db0ed85c990629fd5a7baaaf1d8e",
+                          "responseHeaders":  {
+                                                  "Connection":  "keep-alive",
+                                                  "X-Frame-Options":  "SAMEORIGIN",
+                                                  "Date":  "Thu, 01 Oct 2026 23:56:29 GMT",
+                                                  "Server":  "Kestrel",
+                                                  "Content-Length":  "762",
+                                                  "Content-Type":  "text/xml; charset=utf-8"
+                                              }
+                      }
+                  ],
+    "finished":  "2026-10-01T16:56:29.9154954-07:00"
+}

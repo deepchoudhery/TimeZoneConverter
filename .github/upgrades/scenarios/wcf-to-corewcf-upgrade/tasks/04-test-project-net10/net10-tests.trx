@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="91e9068d-6adf-4465-91b7-74455c61ef39" name="decho@CPC-decho-AGGEK 2026-10-01 17:06:34" runUser="REDMOND\decho" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-10-01T17:06:34.2355076-07:00" queuing="2026-10-01T17:06:34.2355078-07:00" start="2026-10-01T17:06:32.1358609-07:00" finish="2026-10-01T17:06:34.5578300-07:00" />
+  <TestSettings name="default" id="4ac6bbe2-72cc-43ec-8a03-fc8661876cda">
+    <Deployment runDeploymentRoot="decho_CPC-decho-AGGEK_2026-10-01_17_06_34" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="e047e303-054e-4573-b1b3-10cf1fed41ee" testId="137f234f-07bb-850d-8939-1daec49a7811" testName="ConvertToOffset_SoapUiRequest_ResponseMatchesGoldenBaseline (&quot;ConvertToNegativeOffset&quot;,&quot;2022-09-24T02:23:45.6780000-06:00&quot;)" computerName="CPC-decho-AGGEK" duration="00:00:00.0015590" startTime="2026-10-01T17:06:34.2184528-07:00" endTime="2026-10-01T17:06:34.2200615-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e047e303-054e-4573-b1b3-10cf1fed41ee" />
+    <UnitTestResult executionId="ae3857d9-1fca-4120-a839-1de306a984b7" testId="1350252e-ee20-8db1-a801-0ff6067817a0" testName="Metadata_Wsdl_MatchesGoldenBaselineInfoset (&quot;metadata/wsdl-wsdl0.xml&quot;,&quot;?wsdl=wsdl0&quot;)" computerName="CPC-decho-AGGEK" duration="00:00:00.0059101" startTime="2026-10-01T17:06:34.4159032-07:00" endTime="2026-10-01T17:06:34.4218619-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ae3857d9-1fca-4120-a839-1de306a984b7" />
+    <UnitTestResult executionId="3fdd45e2-c7c8-4a5f-8d84-7be010cba7fe" testId="1e24f665-fff9-8c32-9ce8-a1af2a433a79" testName="ReplyAction_IsPreservedByResponseDispatchFormatter" computerName="CPC-decho-AGGEK" duration="00:00:00.0028989" startTime="2026-10-01T17:06:34.4574944-07:00" endTime="2026-10-01T17:06:34.4814627-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3fdd45e2-c7c8-4a5f-8d84-7be010cba7fe" />
+    <UnitTestResult executionId="d2703c30-d4ef-4838-abee-82796811c855" testId="1f3bb9ca-e184-8a09-871a-d50fa1ffc260" testName="GoldenBaseline_FilesMatchCaptureManifest" computerName="CPC-decho-AGGEK" duration="00:00:00.0207936" startTime="2026-10-01T17:06:33.9806314-07:00" endTime="2026-10-01T17:06:34.0015059-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d2703c30-d4ef-4838-abee-82796811c855" />
+    <UnitTestResult executionId="9537382f-efcd-4967-b622-1bcc4996f19f" testId="1decb8e5-8562-8a50-9eec-a4ab7750976b" testName="Metadata_Wsdl_MatchesGoldenBaselineInfoset (&quot;metadata/singleWsdl.xml&quot;,&quot;?singleWsdl&quot;)" computerName="CPC-decho-AGGEK" duration="00:00:00.0277152" startTime="2026-10-01T17:06:34.4218948-07:00" endTime="2026-10-01T17:06:34.4496521-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9537382f-efcd-4967-b622-1bcc4996f19f" />
+    <UnitTestResult executionId="db7db233-5062-4471-93c3-21f0b2c461e7" testId="1463a137-2854-8fd2-a8c1-503769afd851" testName="ConvertToOffset_SoapUiRequest_ResponseMatchesGoldenBaseline (&quot;ConvertToHigherOffset&quot;,&quot;2022-09-24T15:23:45.6780000+07:00&quot;)" computerName="CPC-decho-AGGEK" duration="00:00:00.0057463" startTime="2026-10-01T17:06:34.2105995-07:00" endTime="2026-10-01T17:06:34.2165492-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="db7db233-5062-4471-93c3-21f0b2c461e7" />
+    <UnitTestResult executionId="d5a2c42f-febc-42ad-bb77-30dbc19f04de" testId="15a2b5c4-48d2-89e3-aa8f-9951f3ca395d" testName="UnknownAction_FaultMatchesGoldenBaselineStructure" computerName="CPC-decho-AGGEK" duration="00:00:00.0125285" startTime="2026-10-01T17:06:34.2200936-07:00" endTime="2026-10-01T17:06:34.2326731-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d5a2c42f-febc-42ad-bb77-30dbc19f04de" />
+    <UnitTestResult executionId="cd9b59cc-2c96-4a97-8119-8572c6b34697" testId="1cdb901f-9fa0-891c-97d5-40440b7599f6" testName="ReadObject" computerName="CPC-decho-AGGEK" duration="00:00:00.0078717" startTime="2026-10-01T17:06:33.6218805-07:00" endTime="2026-10-01T17:06:33.6316298-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cd9b59cc-2c96-4a97-8119-8572c6b34697" />
+    <UnitTestResult executionId="9be6fcc5-ab11-425c-90c6-d8456fb6fe88" testId="1ab8d44e-b54b-813a-98b7-af2d7094b36a" testName="TestHost_ListensOnLoopbackOnly" computerName="CPC-decho-AGGEK" duration="00:00:00.0007443" startTime="2026-10-01T17:06:33.6321516-07:00" endTime="2026-10-01T17:06:33.9802393-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9be6fcc5-ab11-425c-90c6-d8456fb6fe88">
+      <Output>
+        <StdOut>info: Microsoft.Hosting.Lifetime[14]&#xD;
+      Now listening on: http://127.0.0.1:59847&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Application started. Press Ctrl+C to shut down.&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Hosting environment: Development&#xD;
+info: Microsoft.Hosting.Lifetime[0]&#xD;
+      Content root path: C:\Users\decho\source\repos\copilot-worktrees\TimeZoneConverter\deepchoudhery-fantastic-goggles\src48\TimeZoneConverter&#xD;
+info: CoreWCF.Channels.ServiceModelHttpMiddleware[0]&#xD;
+      Mapping CoreWCF branch app for path /TimeZoneConverter.svc&#xD;
+info: CoreWCF.Channels.MetadataMiddleware[0]&#xD;
+      Configuring metadata to /TimeZoneConverter.svc&#xD;
+info: CoreWCF.Channels.MetadataMiddleware[0]&#xD;
+      Configuring metadata to /TimeZoneConverter.svc</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ca602400-98a5-477a-8577-c4e2b5cdd475" testId="1551a1d2-dc81-8752-a027-08f60a7cf7b5" testName="Metadata_Wsdl_MatchesGoldenBaselineInfoset (&quot;metadata/wsdl.xml&quot;,&quot;?wsdl&quot;)" computerName="CPC-decho-AGGEK" duration="00:00:00.0144272" startTime="2026-10-01T17:06:34.4013564-07:00" endTime="2026-10-01T17:06:34.4158536-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ca602400-98a5-477a-8577-c4e2b5cdd475" />
+    <UnitTestResult executionId="1e8f0f81-af19-4395-8bfa-80c6ae72703e" testId="11c525e8-e4ea-81ab-b45e-05b86c682aca" testName="ServiceHelpPage_MatchesGoldenBaseline" computerName="CPC-decho-AGGEK" duration="00:00:00.0055343" startTime="2026-10-01T17:06:34.4518731-07:00" endTime="2026-10-01T17:06:34.4574577-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1e8f0f81-af19-4395-8bfa-80c6ae72703e" />
+    <UnitTestResult executionId="52298dd7-d6ca-4a02-832e-fca2f99795d6" testId="17189b12-8305-8875-9f8c-52242ce31191" testName="ConvertToOffset_SoapUiRequest_ResponseMatchesGoldenBaseline (&quot;ConvertToLowerOffset&quot;,&quot;2022-09-24T09:23:45.6780000+01:00&quot;)" computerName="CPC-decho-AGGEK" duration="00:00:00.1982943" startTime="2026-10-01T17:06:34.0036320-07:00" endTime="2026-10-01T17:06:34.2105145-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="52298dd7-d6ca-4a02-832e-fca2f99795d6" />
+    <UnitTestResult executionId="0c0c43dc-74f0-4235-b107-8b38df65acf7" testId="1fb5023c-acd5-8767-81a3-5d366f5b98c9" testName="Metadata_Xsd_IsByteIdenticalToGoldenBaseline" computerName="CPC-decho-AGGEK" duration="00:00:00.1684542" startTime="2026-10-01T17:06:34.2327383-07:00" endTime="2026-10-01T17:06:34.4012912-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0c0c43dc-74f0-4235-b107-8b38df65acf7" />
+    <UnitTestResult executionId="91b1c617-94b7-4048-b050-28fb277bb709" testId="1bb8869c-4cae-81fb-afa2-606906b21881" testName="ConvertToOffset_SoapUiRequest_ResponseMatchesGoldenBaseline (&quot;ConvertToSameOffset&quot;,&quot;2022-09-24T10:23:45.6780000+02:00&quot;)" computerName="CPC-decho-AGGEK" duration="00:00:00.0017539" startTime="2026-10-01T17:06:34.2165955-07:00" endTime="2026-10-01T17:06:34.2184092-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="91b1c617-94b7-4048-b050-28fb277bb709" />
+    <UnitTestResult executionId="bb1dee9d-d270-41d2-947a-782a364fc2c9" testId="139fd7b2-b80f-80a7-a2ea-16d62473992c" testName="WriteObject" computerName="CPC-decho-AGGEK" duration="00:00:00.0400290" startTime="2026-10-01T17:06:33.5457157-07:00" endTime="2026-10-01T17:06:33.6155461-07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bb1dee9d-d270-41d2-947a-782a364fc2c9" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="GoldenBaseline_FilesMatchCaptureManifest" storage="c:\users\decho\source\repos\copilot-worktrees\timezoneconverter\deepchoudhery-fantastic-goggles\src48\timezoneconvertertest\bin\debug\net10.0\timezoneconvertertest.dll" id="1f3bb9ca-e184-8a09-871a-d50fa1ffc260">
+      <Execution id="d2703c30-d4ef-4838-abee-82796811c855" />
+      <TestMethod codeBase="C:\Users\decho\source\repos\copilot-worktrees\TimeZoneConverter\deepchoudhery-fantastic-goggles\src48\TimeZoneConverterTest\bin\Debug\net10.0\TimeZoneConverterTest.dll" adapterTypeName="executor://mstestadapter/v4" className="TimeZoneConverterTest.EndpointWireTests" name="GoldenBaseline_FilesMatchCaptureManifest" />
+    </UnitTest>
+    <UnitTest name="ConvertToOffset_SoapUiRequest_ResponseMatchesGoldenBaseline (&quot;ConvertToLowerOffset&quot;,&quot;2022-09-24T09:23:45.6780000+01:00&quot;)" storage="c:\users\decho\source\repos\copilot-worktrees\timezoneconverter\deepchoudhery-fantastic-goggles\src48\timezoneconvertertest\bin\debug\net10.0\timezoneconvertertest.dll" id="17189b12-8305-8875-9f8c-52242ce31191">
+      <Execution id="52298dd7-d6ca-4a02-832e-fca2f99795d6" />
+      <TestMethod codeBase="C:\Users\decho\source\repos\copilot-worktrees\TimeZoneConverter\deepchoudhery-fantastic-goggles\src48\TimeZoneConverterTest\bin\Debug\net10.0\TimeZoneConverterTest.dll" adapterTypeName="executor://mstestadapter/v4" className="TimeZoneConverterTest.EndpointWireTests" name="ConvertToOffset_SoapUiRequest_ResponseMatchesGoldenBaseline" />
+    </UnitTest>
+    <UnitTest name="Metadata_Wsdl_MatchesGoldenBaselineInfoset (&quot;metadata/wsdl.xml&quot;,&quot;?wsdl&quot;)" storage="c:\users\decho\source\repos\copilot-worktrees\timezoneconverter\deepchoudhery-fantastic-goggles\src48\timezoneconvertertest\bin\debug\net10.0\timezoneconvertertest.dll" id="1551a1d2-dc81-8752-a027-08f60a7cf7b5">
+      <Execution id="ca602400-98a5-477a-8577-c4e2b5cdd475" />
+      <TestMethod codeBase="C:\Users\decho\source\repos\copilot-worktrees\TimeZoneConverter\deepchoudhery-fantastic-goggles\src48\TimeZoneConverterTest\bin\Debug\net10.0\TimeZoneConverterTest.dll" adapterTypeName="executor://mstestadapter/v4" className="TimeZoneConverterTest.EndpointWireTests" name="Metadata_Wsdl_MatchesGoldenBaselineInfoset" />
+    </UnitTest>
+    <UnitTest name="Metadata_Wsdl_MatchesGoldenBaselineInfoset (&quot;metadata/wsdl-wsdl0.xml&quot;,&quot;?wsdl=wsdl0&quot;)" storage="c:\users\decho\source\repos\copilot-worktrees\timezoneconverter\deepchoudhery-fantastic-goggles\src48\timezoneconvertertest\bin\debug\net10.0\timezoneconvertertest.dll" id="1350252e-ee20-8db1-a801-0ff6067817a0">
+      <Execution id="ae3857d9-1fca-4120-a839-1de306a984b7" />
+      <TestMethod codeBase="C:\Users\decho\source\repos\copilot-worktrees\TimeZoneConverter\deepchoudhery-fantastic-goggles\src48\TimeZoneConverterTest\bin\Debug\net10.0\TimeZoneConverterTest.dll" adapterTypeName="executor://mstestadapter/v4" className="TimeZoneConverterTest.EndpointWireTests" name="Metadata_Wsdl_MatchesGoldenBaselineInfoset" />
+    </UnitTest>
+    <UnitTest name="WriteObject" storage="c:\users\decho\source\repos\copilot-worktrees\timezoneconverter\deepchoudhery-fantastic-goggles\src48\timezoneconvertertest\bin\debug\net10.0\timezoneconvertertest.dll" id="139fd7b2-b80f-80a7-a2ea-16d62473992c">
+      <Execution id="bb1dee9d-d270-41d2-947a-782a364fc2c9" />
+      <TestMethod codeBase="C:\Users\decho\source\repos\copilot-worktrees\TimeZoneConverter\deepchoudhery-fantastic-goggles\src48\TimeZoneConverterTest\bin\Debug\net10.0\TimeZoneConverterTest.dll" adapterTypeName="executor://mstestadapter/v4" className="TimeZoneConverterTest.ConversionReponseSerializerTest" name="WriteObject" />
+    </UnitTest>
+    <UnitTest name="ReadObject" storage="c:\users\decho\source\repos\copilot-worktrees\timezoneconverter\deepchoudhery-fantastic-goggles\src48\timezoneconvertertest\bin\debug\net10.0\timezoneconvertertest.dll" id="1cdb901f-9fa0-891c-97d5-40440b7599f6">
+      <Execution id="cd9b59cc-2c96-4a97-8119-8572c6b34697" />
+      <TestMethod codeBase="C:\Users\decho\source\repos\copilot-worktrees\TimeZoneConverter\deepchoudhery-fantastic-goggles\src48\TimeZoneConverterTest\bin\Debug\net10.0\TimeZoneConverterTest.dll" adapterTypeName="executor://mstestadapter/v4" className="TimeZoneConverterTest.ConversionReponseSerializerTest" name="ReadObject" />
+    </UnitTest>
+    <UnitTest name="Metadata_Xsd_IsByteIdenticalToGoldenBaseline" storage="c:\users\decho\source\repos\copilot-worktrees\timezoneconverter\deepchoudhery-fantastic-goggles\src48\timezoneconvertertest\bin\debug\net10.0\timezoneconvertertest.dll" id="1fb5023c-acd5-8767-81a3-5d366f5b98c9">
+      <Execution id="0c0c43dc-74f0-4235-b107-8b38df65acf7" />
+      <TestMethod codeBase="C:\Users\decho\source\repos\copilot-worktrees\TimeZoneConverter\deepchoudhery-fantastic-goggles\src48\TimeZoneConverterTest\bin\Debug\net10.0\TimeZoneConverterTest.dll" adapterTypeName="executor://mstestadapter/v4" className="TimeZoneConverterTest.EndpointWireTests" name="Metadata_Xsd_IsByteIdenticalToGoldenBaseline" />
+    </UnitTest>
+    <UnitTest name="ReplyAction_IsPreservedByResponseDispatchFormatter" storage="c:\users\decho\source\repos\copilot-worktrees\timezoneconverter\deepchoudhery-fantastic-goggles\src48\timezoneconvertertest\bin\debug\net10.0\timezoneconvertertest.dll" id="1e24f665-fff9-8c32-9ce8-a1af2a433a79">
+      <Execution id="3fdd45e2-c7c8-4a5f-8d84-7be010cba7fe" />
+      <TestMethod codeBase="C:\Users\decho\source\repos\copilot-worktrees\TimeZoneConverter\deepchoudhery-fantastic-goggles\src48\TimeZoneConverterTest\bin\Debug\net10.0\TimeZoneConverterTest.dll" adapterTypeName="executor://mstestadapter/v4" className="TimeZoneConverterTest.EndpointWireTests" name="ReplyAction_IsPreservedByResponseDispatchFormatter" />
+    </UnitTest>
+    <UnitTest name="ConvertToOffset_SoapUiRequest_ResponseMatchesGoldenBaseline (&quot;ConvertToSameOffset&quot;,&quot;2022-09-24T10:23:45.6780000+02:00&quot;)" storage="c:\users\decho\source\repos\copilot-worktrees\timezoneconverter\deepchoudhery-fantastic-goggles\src48\timezoneconvertertest\bin\debug\net10.0\timezoneconvertertest.dll" id="1bb8869c-4cae-81fb-afa2-606906b21881">
+      <Execution id="91b1c617-94b7-4048-b050-28fb277bb709" />
+      <TestMethod codeBase="C:\Users\decho\source\repos\copilot-worktrees\TimeZoneConverter\deepchoudhery-fantastic-goggles\src48\TimeZoneConverterTest\bin\Debug\net10.0\TimeZoneConverterTest.dll" adapterTypeName="executor://mstestadapter/v4" className="TimeZoneConverterTest.EndpointWireTests" name="ConvertToOffset_SoapUiRequest_ResponseMatchesGoldenBaseline" />
+    </UnitTest>
+    <UnitTest name="ConvertToOffset_SoapUiRequest_ResponseMatchesGoldenBaseline (&quot;ConvertToNegativeOffset&quot;,&quot;2022-09-24T02:23:45.6780000-06:00&quot;)" storage="c:\users\decho\source\repos\copilot-worktrees\timezoneconverter\deepchoudhery-fantastic-goggles\src48\timezoneconvertertest\bin\debug\net10.0\timezoneconvertertest.dll" id="137f234f-07bb-850d-8939-1daec49a7811">
+      <Execution id="e047e303-054e-4573-b1b3-10cf1fed41ee" />
+      <TestMethod codeBase="C:\Users\decho\source\repos\copilot-worktrees\TimeZoneConverter\deepchoudhery-fantastic-goggles\src48\TimeZoneConverterTest\bin\Debug\net10.0\TimeZoneConverterTest.dll" adapterTypeName="executor://mstestadapter/v4" className="TimeZoneConverterTest.EndpointWireTests" name="ConvertToOffset_SoapUiRequest_ResponseMatchesGoldenBaseline" />
+    </UnitTest>
+    <UnitTest name="ServiceHelpPage_MatchesGoldenBaseline" storage="c:\users\decho\source\repos\copilot-worktrees\timezoneconverter\deepchoudhery-fantastic-goggles\src48\timezoneconvertertest\bin\debug\net10.0\timezoneconvertertest.dll" id="11c525e8-e4ea-81ab-b45e-05b86c682aca">
+      <Execution id="1e8f0f81-af19-4395-8bfa-80c6ae72703e" />
+      <TestMethod codeBase="C:\Users\decho\source\repos\copilot-worktrees\TimeZoneConverter\deepchoudhery-fantastic-goggles\src48\TimeZoneConverterTest\bin\Debug\net10.0\TimeZoneConverterTest.dll" adapterTypeName="executor://mstestadapter/v4" className="TimeZoneConverterTest.EndpointWireTests" name="ServiceHelpPage_MatchesGoldenBaseline" />
+    </UnitTest>
+    <UnitTest name="Metadata_Wsdl_MatchesGoldenBaselineInfoset (&quot;metadata/singleWsdl.xml&quot;,&quot;?singleWsdl&quot;)" storage="c:\users\decho\source\repos\copilot-worktrees\timezoneconverter\deepchoudhery-fantastic-goggles\src48\timezoneconvertertest\bin\debug\net10.0\timezoneconvertertest.dll" id="1decb8e5-8562-8a50-9eec-a4ab7750976b">
+      <Execution id="9537382f-efcd-4967-b622-1bcc4996f19f" />
+      <TestMethod codeBase="C:\Users\decho\source\repos\copilot-worktrees\TimeZoneConverter\deepchoudhery-fantastic-goggles\src48\TimeZoneConverterTest\bin\Debug\net10.0\TimeZoneConverterTest.dll" adapterTypeName="executor://mstestadapter/v4" className="TimeZoneConverterTest.EndpointWireTests" name="Metadata_Wsdl_MatchesGoldenBaselineInfoset" />
+    </UnitTest>
+    <UnitTest name="UnknownAction_FaultMatchesGoldenBaselineStructure" storage="c:\users\decho\source\repos\copilot-worktrees\timezoneconverter\deepchoudhery-fantastic-goggles\src48\timezoneconvertertest\bin\debug\net10.0\timezoneconvertertest.dll" id="15a2b5c4-48d2-89e3-aa8f-9951f3ca395d">
+      <Execution id="d5a2c42f-febc-42ad-bb77-30dbc19f04de" />
+      <TestMethod codeBase="C:\Users\decho\source\repos\copilot-worktrees\TimeZoneConverter\deepchoudhery-fantastic-goggles\src48\TimeZoneConverterTest\bin\Debug\net10.0\TimeZoneConverterTest.dll" adapterTypeName="executor://mstestadapter/v4" className="TimeZoneConverterTest.EndpointWireTests" name="UnknownAction_FaultMatchesGoldenBaselineStructure" />
+    </UnitTest>
+    <UnitTest name="ConvertToOffset_SoapUiRequest_ResponseMatchesGoldenBaseline (&quot;ConvertToHigherOffset&quot;,&quot;2022-09-24T15:23:45.6780000+07:00&quot;)" storage="c:\users\decho\source\repos\copilot-worktrees\timezoneconverter\deepchoudhery-fantastic-goggles\src48\timezoneconvertertest\bin\debug\net10.0\timezoneconvertertest.dll" id="1463a137-2854-8fd2-a8c1-503769afd851">
+      <Execution id="db7db233-5062-4471-93c3-21f0b2c461e7" />
+      <TestMethod codeBase="C:\Users\decho\source\repos\copilot-worktrees\TimeZoneConverter\deepchoudhery-fantastic-goggles\src48\TimeZoneConverterTest\bin\Debug\net10.0\TimeZoneConverterTest.dll" adapterTypeName="executor://mstestadapter/v4" className="TimeZoneConverterTest.EndpointWireTests" name="ConvertToOffset_SoapUiRequest_ResponseMatchesGoldenBaseline" />
+    </UnitTest>
+    <UnitTest name="TestHost_ListensOnLoopbackOnly" storage="c:\users\decho\source\repos\copilot-worktrees\timezoneconverter\deepchoudhery-fantastic-goggles\src48\timezoneconvertertest\bin\debug\net10.0\timezoneconvertertest.dll" id="1ab8d44e-b54b-813a-98b7-af2d7094b36a">
+      <Execution id="9be6fcc5-ab11-425c-90c6-d8456fb6fe88" />
+      <TestMethod codeBase="C:\Users\decho\source\repos\copilot-worktrees\TimeZoneConverter\deepchoudhery-fantastic-goggles\src48\TimeZoneConverterTest\bin\Debug\net10.0\TimeZoneConverterTest.dll" adapterTypeName="executor://mstestadapter/v4" className="TimeZoneConverterTest.EndpointWireTests" name="TestHost_ListensOnLoopbackOnly" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="137f234f-07bb-850d-8939-1daec49a7811" executionId="e047e303-054e-4573-b1b3-10cf1fed41ee" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1350252e-ee20-8db1-a801-0ff6067817a0" executionId="ae3857d9-1fca-4120-a839-1de306a984b7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1e24f665-fff9-8c32-9ce8-a1af2a433a79" executionId="3fdd45e2-c7c8-4a5f-8d84-7be010cba7fe" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1f3bb9ca-e184-8a09-871a-d50fa1ffc260" executionId="d2703c30-d4ef-4838-abee-82796811c855" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1decb8e5-8562-8a50-9eec-a4ab7750976b" executionId="9537382f-efcd-4967-b622-1bcc4996f19f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1463a137-2854-8fd2-a8c1-503769afd851" executionId="db7db233-5062-4471-93c3-21f0b2c461e7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="15a2b5c4-48d2-89e3-aa8f-9951f3ca395d" executionId="d5a2c42f-febc-42ad-bb77-30dbc19f04de" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1cdb901f-9fa0-891c-97d5-40440b7599f6" executionId="cd9b59cc-2c96-4a97-8119-8572c6b34697" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1ab8d44e-b54b-813a-98b7-af2d7094b36a" executionId="9be6fcc5-ab11-425c-90c6-d8456fb6fe88" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1551a1d2-dc81-8752-a027-08f60a7cf7b5" executionId="ca602400-98a5-477a-8577-c4e2b5cdd475" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="11c525e8-e4ea-81ab-b45e-05b86c682aca" executionId="1e8f0f81-af19-4395-8bfa-80c6ae72703e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="17189b12-8305-8875-9f8c-52242ce31191" executionId="52298dd7-d6ca-4a02-832e-fca2f99795d6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1fb5023c-acd5-8767-81a3-5d366f5b98c9" executionId="0c0c43dc-74f0-4235-b107-8b38df65acf7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1bb8869c-4cae-81fb-afa2-606906b21881" executionId="91b1c617-94b7-4048-b050-28fb277bb709" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="139fd7b2-b80f-80a7-a2ea-16d62473992c" executionId="bb1dee9d-d270-41d2-947a-782a364fc2c9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="15" executed="15" passed="15" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+</TestRun>

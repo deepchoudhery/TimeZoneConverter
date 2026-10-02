@@ -14,9 +14,11 @@ public class ConvertToOffsetResponseSerializer : XmlObjectSerializer
 
     public ConvertToOffsetResponseSerializer()
     {
+        // Wire parity: .NET Framework emitted these declarations as xmlns:xsd, xmlns:xsi (Hashtable order).
+        // On .NET (Core) XmlSerializerNamespaces keeps insertion order, so add xsd first to keep that output.
         namespaces = new XmlSerializerNamespaces();
-        namespaces.Add("xsi", "http://www.w3.org/2001/XMLSchema-instance");
         namespaces.Add("xsd", "http://www.w3.org/2001/XMLSchema");
+        namespaces.Add("xsi", "http://www.w3.org/2001/XMLSchema-instance");
 
         _serializer = new XmlSerializer(typeof(ConvertToOffsetResponse), SerializerOverrides(), null, null, "http://bartjolling.github.io/");
     }

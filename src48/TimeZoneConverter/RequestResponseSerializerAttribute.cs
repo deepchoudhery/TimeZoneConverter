@@ -1,7 +1,8 @@
 ﻿using System;
-using System.ServiceModel.Channels;
-using System.ServiceModel.Description;
-using System.ServiceModel.Dispatcher;
+using System.Linq;
+using CoreWCF.Channels;
+using CoreWCF.Description;
+using CoreWCF.Dispatcher;
 
 namespace TimeZoneConverter;
 
@@ -24,7 +25,7 @@ public class RequestResponseSerializerAttribute : Attribute, IOperationBehavior
 
     public void ApplyDispatchBehavior(OperationDescription operationDescription, DispatchOperation dispatchOperation)
     {
-        XmlSerializerBehavior = operationDescription.Behaviors.Find<XmlSerializerOperationBehavior>();
+        XmlSerializerBehavior = operationDescription.OperationBehaviors.OfType<XmlSerializerOperationBehavior>().FirstOrDefault();
 
         if (XmlSerializerBehavior != null && dispatchOperation.Formatter == null)
         {
