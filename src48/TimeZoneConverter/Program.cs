@@ -7,6 +7,7 @@ using CoreWCF.Description;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using TimeZoneConverter;
 using TimeZoneConverter.Contracts;
 
@@ -22,6 +23,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddServiceModelServices();
 builder.Services.AddServiceModelMetadata();
 
+// WSDL soap:address / wsdl:import / help-page URLs are built from the request's Host header
+// (as IIS-hosted WCF did) instead of the Kestrel listen address (e.g. 0.0.0.0 or a container IP).
+builder.Services.AddSingleton<IServiceBehavior, UseRequestHeadersForMetadataAddressBehavior>();
+
+builder.Services.AddSingleton<HttpsEndpointStartupCheck>();
+builder.Services.AddHostedService(services => services.GetRequiredService<HttpsEndpointStartupCheck>());
+
 var app = builder.Build();
 
 // Former Web.config <httpProtocol><customHeaders>: X-Frame-Options: SAMEORIGIN on every response.
@@ -32,9 +40,17 @@ app.Use(async (context, next) =>
 });
 
 // Former protocolMapping (https -> basicHttpsBinding): the default HTTPS endpoint only existed
-// when the site had an https binding. Mirror that: E2 is added only when the host is configured
-// with an HTTPS address.
-bool hasHttpsBinding = HasHttpsBinding(app.Configuration);
+// when the site had an https binding. Mirror that with the TimeZoneConverter:EnableHttpsEndpoint
+// setting (appsettings.json, or env var TimeZoneConverter__EnableHttpsEndpoint):
+//   auto  (default) E2 is added only when a real HTTPS listener is configured for Kestrel
+//                   (urls / ASPNETCORE_URLS, https_ports / ASPNETCORE_HTTPS_PORTS, Kestrel:Endpoints:*:Url).
+//   true            E2 is always added. Use this under IIS in-process hosting, where the site's https
+//                   binding is not visible in configuration (ANCM only sets ASPNETCORE_HTTPS_PORT).
+//   false           E2 is never added.
+// Whenever E2 is added, HttpsEndpointStartupCheck fails startup if the server reports no https address
+// (CoreWCF would otherwise fail every request, E1 included, on first use).
+bool registerHttpsEndpoint = ShouldRegisterHttpsEndpoint(app.Configuration, app.Logger);
+app.Services.GetRequiredService<HttpsEndpointStartupCheck>().HttpsEndpointRegistered = registerHttpsEndpoint;
 
 app.UseServiceModel(serviceBuilder =>
 {
@@ -48,7 +64,7 @@ app.UseServiceModel(serviceBuilder =>
     serviceBuilder.AddServiceEndpoint<TimeZoneConverterService, ITimeZoneConverter>(
         new BasicHttpBinding(), ServicePath);
 
-    if (hasHttpsBinding)
+    if (registerHttpsEndpoint)
     {
         // E2: former default endpoint for the https scheme (protocolMapping -> basicHttpsBinding,
         // Transport security, no client credential). Named like WCF's BasicHttpsBinding so the
@@ -65,7 +81,41 @@ serviceMetadataBehavior.HttpsGetEnabled = true;
 
 app.Run();
 
-static bool HasHttpsBinding(IConfiguration configuration)
+static bool ShouldRegisterHttpsEndpoint(IConfiguration configuration, ILogger logger)
+{
+    const string SwitchKey = "TimeZoneConverter:EnableHttpsEndpoint";
+
+    string mode = configuration[SwitchKey]?.Trim();
+    if (string.IsNullOrEmpty(mode) || string.Equals(mode, "auto", StringComparison.OrdinalIgnoreCase))
+    {
+        if (HasHttpsListener(configuration))
+        {
+            return true;
+        }
+
+        // ASPNETCORE_HTTPS_PORT (https_port) is only the HTTPS redirection target port, not a listener.
+        // The ASP.NET Core Module sets it for IIS sites with an https binding, so it is the one hint
+        // that E2 may be wanted on a server whose HTTPS address is not visible here.
+        if (!string.IsNullOrWhiteSpace(configuration["https_port"]))
+        {
+            logger.LogWarning(
+                "https_port (ASPNETCORE_HTTPS_PORT) is set but no HTTPS listener is configured, so the HTTPS endpoint (E2) is not registered. " +
+                "If the server provides an HTTPS binding (for example IIS), set {SwitchKey}=true.",
+                SwitchKey);
+        }
+
+        return false;
+    }
+
+    if (bool.TryParse(mode, out bool enabled))
+    {
+        return enabled;
+    }
+
+    throw new InvalidOperationException($"Invalid value '{mode}' for {SwitchKey}. Expected 'auto', 'true' or 'false'.");
+}
+
+static bool HasHttpsListener(IConfiguration configuration)
 {
     static bool IsHttps(string url) =>
         url != null && url.TrimStart().StartsWith("https://", StringComparison.OrdinalIgnoreCase);
@@ -77,8 +127,8 @@ static bool HasHttpsBinding(IConfiguration configuration)
         return true;
     }
 
-    // ASPNETCORE_HTTPS_PORTS (Kestrel) / ASPNETCORE_HTTPS_PORT (set by the ASP.NET Core Module for IIS https bindings)
-    if (!string.IsNullOrWhiteSpace(configuration["https_ports"]) || !string.IsNullOrWhiteSpace(configuration["https_port"]))
+    // --https_ports / ASPNETCORE_HTTPS_PORTS: Kestrel binds https://*:{port} for each value
+    if (!string.IsNullOrWhiteSpace(configuration["https_ports"]))
     {
         return true;
     }
